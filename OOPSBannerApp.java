@@ -1,6 +1,7 @@
 public class OOPSBannerApp {
     public static void main(String[] args) {
-        Banner banner = new Banner("OOPS");
-        banner.print();
+
+        Banner banner = new Banner();
+        banner.print("OOPS");
     }
 }
