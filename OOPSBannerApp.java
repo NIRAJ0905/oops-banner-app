@@ -1,19 +1,21 @@
 /**
  * OOPSBannerApp
  *
- * This program prints the text "OOPS" to the console.
+ * Demonstrates modular programming using methods
  *
  * @author Niraj
- * @version 1.0
+ * @version 2.0
  */
 public class OOPSBannerApp {
 
-    /**
-     * Main method – entry point of the program
-     *
-     * @param args command-line arguments
-     */
     public static void main(String[] args) {
+        printOOPS();
+    }
+
+    /**
+     * Prints OOPS text to console
+     */
+    private static void printOOPS() {
         System.out.println("OOPS");
     }
 }
