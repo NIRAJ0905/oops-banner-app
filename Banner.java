@@ -3,12 +3,14 @@ import java.util.Map;
 
 public class Banner {
 
-    private Map<Character, String[]> patterns;
+    private Map<Character, String[]> patterns = new HashMap<>();
 
     public Banner() {
-        patterns = new HashMap<>();
+        registerDefaultPatterns();
+    }
 
-        patterns.put('O', new String[]{
+    private void registerDefaultPatterns() {
+        addPattern('O', new String[]{
             " *** ",
             "*   *",
             "*   *",
@@ -16,7 +18,7 @@ public class Banner {
             " *** "
         });
 
-        patterns.put('P', new String[]{
+        addPattern('P', new String[]{
             "**** ",
             "*   *",
             "**** ",
@@ -24,7 +26,7 @@ public class Banner {
             "*    "
         });
 
-        patterns.put('S', new String[]{
+        addPattern('S', new String[]{
             " ****",
             "*    ",
             " *** ",
@@ -33,14 +35,18 @@ public class Banner {
         });
     }
 
+    public void addPattern(char ch, String[] pattern) {
+        patterns.put(ch, pattern);
+    }
+
     public void print(String text) {
         text = text.toUpperCase();
 
         for (int row = 0; row < 5; row++) {
             for (char ch : text.toCharArray()) {
-                String[] pattern = patterns.get(ch);
-                if (pattern != null) {
-                    System.out.print(pattern[row] + "  ");
+                String[] p = patterns.get(ch);
+                if (p != null) {
+                    System.out.print(p[row] + "  ");
                 }
             }
             System.out.println();
