@@ -1,8 +1,11 @@
 public class Banner {
+    private String text;
 
-    String text = "OOPS";
+    public Banner(String text) {
+        this.text = text;
+    }
 
-    public void printBanner() {
+    public void print() {
         System.out.println(text);
     }
 }
