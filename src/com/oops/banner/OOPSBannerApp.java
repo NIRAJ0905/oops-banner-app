@@ -1,34 +1,23 @@
-/**
- * OOPSBannerApp - UC2
- * Renders OOPS in banner format using * and spaces.
- *
- * @author Niraj
- * @version 2.0
- */
- package com.oops.banner;
+package com.oops.banner;
+
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
+        printBanner();
+    }
 
-        // Line 1
-        System.out.println(" ******** " + " ******** " + " ******** " + " ******** ");
+    public static void printBanner() {
 
-        // Line 2
-        System.out.println(" *      * " + " *      * " + " *      * " + " *        ");
+        printLine(" ******** ", " ******** ", " ******** ", " ******** ");
+        printLine(" *      * ", " *      * ", " *      * ", " *        ");
+        printLine(" *      * ", " *      * ", " *      * ", " *        ");
+        printLine(" *      * ", " *      * ", " ******** ", " ******** ");
+        printLine(" *      * ", " *      * ", " *        ", "        * ");
+        printLine(" *      * ", " *      * ", " *        ", "        * ");
+        printLine(" ******** ", " ******** ", " *        ", " ******** ");
+    }
 
-        // Line 3
-        System.out.println(" *      * " + " *      * " + " *      * " + " *        ");
-
-        // Line 4
-        System.out.println(" *      * " + " *      * " + " ******** " + " ******** ");
-
-        // Line 5
-        System.out.println(" *      * " + " *      * " + " *        " + "        * ");
-
-        // Line 6
-        System.out.println(" *      * " + " *      * " + " *        " + "        * ");
-
-        // Line 7
-        System.out.println(" ******** " + " ******** " + " *        " + " ******** ");
+    public static void printLine(String o1, String o2, String p, String s) {
+        System.out.println(o1 + o2 + p + s);
     }
 }
